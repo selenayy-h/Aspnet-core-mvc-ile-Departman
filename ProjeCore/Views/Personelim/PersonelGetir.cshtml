@@ -1,0 +1,21 @@
+﻿@model ProjeCore.Models.Personel
+@{
+    ViewData["Title"] = "PersonelGetir";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+
+@using (Html.BeginForm("BirimGuncelle", "Default", FormMethod.Post))
+//bir tane başlangıç formu ,bu form dguncelle adındaki aciton resultı çalıştırıcak ve bu aciton departcont un içinde olacak
+//ve bu da formmethod post old çalışacak yani aslında bir butona vs bastığımda çalışcak
+{
+    <b>Birim ID</b>
+    @Html.TextBoxFor(x => x.PersonelId, new { @class = "form-control" })
+
+
+    <b>Birim Adı</b>
+    @Html.TextBoxFor(x => x.Ad, new { @class = "form-control" })
+    <button class="btn btn-info">Personel Güncelle </button>
+
+
+}
